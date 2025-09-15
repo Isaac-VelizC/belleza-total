@@ -1,0 +1,89 @@
+---
+import type { serviceInterface } from "./../../interface/service";
+import ArrowRight from "./../../assets/svg/arrow-right.astro";
+
+export interface CardServiceProps {
+    service: serviceInterface;
+}
+
+const goToContact = () => {
+  if (typeof window !== "undefined") {
+    window.location.href = "#contact"; // navegación a sección o url
+  }
+};
+
+const { service } = Astro.props;
+---
+
+<div class="group relative">
+  <!-- Elemento decorativo de fondo -->
+  <div class="absolute -inset-4 bg-gradient-to-r from-primary/10 via-secondary/10 to-accentcolor/10 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl group-hover:blur-2xl transition-all duration-500"/>
+
+  <!-- Card principal -->
+  <div
+    class="relative bg-white/80 backdrop-blur-sm border border-secondary/20 rounded-3xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 group-hover:bg-white/95"
+  >
+    <!-- Icono del servicio -->
+    <div class="relative mb-6">
+      <div class="w-20 h-20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 mx-auto">
+        <div class="text-3xl group-hover:animate-bounce">
+          <slot name="icon" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Contenido del servicio -->
+    <div class="text-center space-y-4">
+      <h3
+        class="text-2xl font-bold text-texto group-hover:text-primary transition-colors duration-300"
+      >
+        {service.titulo}
+      </h3>
+
+      <p class="text-texto/70 leading-relaxed text-lg">
+        {service.descripcion}
+      </p>
+
+      <!-- Características destacadas (si las tienes en tu JSON) -->
+      <div class="flex flex-wrap justify-center gap-2 pt-4">
+        <span
+          class="inline-flex items-center gap-1 bg-secondary/10 text-primary px-3 py-1 rounded-full text-sm font-medium"
+        >
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+              clip-rule="evenodd"></path>
+          </svg>
+          Profesional
+        </span>
+        <span
+          class="inline-flex items-center gap-1 bg-accentcolor/10 text-accentcolor px-3 py-1 rounded-full text-sm font-medium"
+        >
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              fill-rule="evenodd"
+              d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+              clip-rule="evenodd"></path>
+          </svg>
+          Rápido
+        </span>
+      </div>
+    </div>
+
+    <!-- Botón de acción -->
+    <div class="mt-8 pt-6 border-t border-secondary/20">
+      <button onclick={goToContact} type="button"
+        class="w-full bg-gradient-to-r from-primary to-secondary text-white py-3 px-6 rounded-full font-semibold hover:from-primary/90 hover:to-secondary/90 transform hover:scale-105 transition-all duration-300 group-hover:shadow-lg"
+      >
+        <span class="flex items-center justify-center gap-2">
+          Solicitar Servicio
+          <ArrowRight color="white" />
+        </span>
+      </button>
+    </div>
+
+    <!-- Efecto de brillo en hover -->
+    <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-transparent via-white/5 to-transparent -skew-x-12 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
+  </div>
+</div>

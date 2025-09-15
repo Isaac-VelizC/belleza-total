@@ -1,0 +1,16 @@
+---
+export interface Props {
+  href: string;
+}
+// destructuramos solo href
+const { href } = Astro.props;
+---
+
+<a
+  href={href}
+  class="mobile-menu-item block px-4 py-3 text-texto hover:text-primary hover:bg-secondary/10 rounded-lg font-medium transition-all duration-200"
+>
+  <div class="flex items-center space-x-3">
+    <slot />
+  </div>
+</a>

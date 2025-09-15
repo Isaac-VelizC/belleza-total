@@ -1,0 +1,47 @@
+---
+import "../styles/global.css";
+import Header from "./Header.astro";
+import Footer from "./Footer.astro";
+const { title } = Astro.props;
+const description = "Salón de Belleza ✨ Expertos en cortes, color, maquillaje y cuidado capilar. Resalta tu belleza natural con Belleza Total.";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | Belleza Total</title>
+
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- SEO básico -->
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="AIsakVeliz" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="salón de belleza, peluquería, maquillaje profesional, corte de cabello, peinados, coloración, estética, cuidado capilar" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title + " | Belleza Total"} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/banner-social.png" />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title + " | Belleza Total"} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/banner-social.png" />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

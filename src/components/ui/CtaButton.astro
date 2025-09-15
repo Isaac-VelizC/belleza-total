@@ -1,0 +1,21 @@
+---
+// Boton.astro
+export interface Props {
+  href: string;
+  text: string;
+  variant?: "primary" | "secondary"; // opción para distinguir estilos
+}
+
+const { href, text, variant = "primary" } = Astro.props;
+
+const baseClass = "inline-flex group px-8 py-4 rounded-full font-semibold text-lg flex items-center justify-center gap-2 transition-all duration-300 transform";
+const primaryClass = "bg-primary text-white shadow-lg hover:bg-primary/90 hover:shadow-xl hover:-translate-y-1";
+const secondaryClass = "border-2 border-primary text-primary hover:bg-primary hover:text-white hover:-translate-y-1";
+const combinedClass = `${baseClass} ${variant === "primary" ? primaryClass : secondaryClass}`;
+---
+
+<a href={href} class={combinedClass}>
+  <slot name="iconFisrt" />
+  {text}
+  <slot name="iconEnd" />
+</a>

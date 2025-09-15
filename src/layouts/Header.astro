@@ -1,0 +1,217 @@
+---
+import NavLink from "@components/ui/NavLink.astro";
+import NavLinkMobile from "@components/ui/NavLinkMobile.astro";
+import LogoName from "@components/LogoName.astro";
+
+// Puedes importar datos del header desde tu JSON si los tienes
+---
+
+<header
+  id="main-header"
+  class="bg-transparent sticky top-0 z-50 transition-all duration-300"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16 lg:h-20">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <LogoName />
+      </div>
+
+      <!-- Navegación Desktop -->
+      <nav class="hidden lg:flex items-center space-x-8">
+        <NavLink href="#hero">Home</NavLink>
+        <NavLink href="#about">Nosotros</NavLink>
+        <NavLink href="#servicios">Servicios</NavLink>
+        <NavLink href="#gallery">Galería</NavLink>
+        <NavLink href="#contact">Contacto</NavLink>
+      </nav>
+
+      <!-- Botón CTA y menú móvil -->
+      <div class="flex items-center space-x-4">
+        <!-- Botón de contacto (Desktop) -->
+        <a
+          href="#contact"
+          class="hidden lg:inline-flex items-center gap-2 bg-accentcolor text-texto px-6 py-2.5 rounded-full font-semibold hover:bg-accentcolor/90 hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300"
+        >
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+            ></path>
+          </svg>
+          Reservar Cita
+        </a>
+
+        <!-- Botón menú móvil -->
+        <button
+          id="mobile-menu-button"
+          class="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-texto hover:text-primary hover:bg-secborder-secondary/10 transition-all duration-200"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <svg
+            class="block h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menú Móvil -->
+  <div
+    id="mobile-menu"
+    class="lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md border-b border-secondary/20 shadow-lg transform -translate-y-full opacity-0 invisible transition-all duration-300"
+  >
+    <div class="px-4 pt-2 pb-4 space-y-2">
+      <NavLinkMobile href="#about">Nosotros</NavLinkMobile>
+      <NavLinkMobile href="#servicios">Servicios</NavLinkMobile>
+      <NavLinkMobile href="#galeria">Galeria</NavLinkMobile>
+      <NavLinkMobile href="#contacto">Contacto</NavLinkMobile>
+
+      <!-- Botón CTA móvil -->
+      <div class="pt-4 border-t border-secondary/20">
+        <a
+          href="#contact"
+          class="mobile-menu-item flex items-center justify-center gap-2 w-full bg-[#FFC107] text-[#333333] px-6 py-3 rounded-full font-semibold hover:bg-[#FFC107]/90 transition-all duration-200"
+        >
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+            ></path>
+          </svg>
+          Reservar Cita
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  // JavaScript para el menú móvil
+  document.addEventListener("DOMContentLoaded", function () {
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileMenuItems = document.querySelectorAll(".mobile-menu-item");
+  const navLinks = [...document.querySelectorAll("nav a")];
+    const header = document.getElementById("main-header");
+    let isMenuOpen = false;
+
+    // Toggle del menú móvil
+    mobileMenuButton?.addEventListener("click", function () {
+      isMenuOpen = !isMenuOpen;
+
+      if (isMenuOpen) {
+        // Abrir menú
+        mobileMenu?.classList.remove(
+          "-translate-y-full",
+          "opacity-0",
+          "invisible"
+        );
+        mobileMenu?.classList.add("translate-y-0", "opacity-100", "visible");
+        mobileMenuButton.setAttribute("aria-expanded", "true");
+
+        // Cambiar icono a X
+        mobileMenuButton.innerHTML = `
+          <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        `;
+      } else {
+        // Cerrar menú
+        mobileMenu?.classList.remove("translate-y-0", "opacity-100", "visible");
+        mobileMenu?.classList.add(
+          "-translate-y-full",
+          "opacity-0",
+          "invisible"
+        );
+        mobileMenuButton.setAttribute("aria-expanded", "false");
+
+        // Cambiar icono a hamburguesa
+        mobileMenuButton.innerHTML = `
+          <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        `;
+      }
+    });
+
+    // Cerrar menú al hacer click en un enlace
+    mobileMenuItems.forEach((item) => {
+      item.addEventListener("click", function () {
+        if (isMenuOpen) {
+          mobileMenuButton?.click(); // Trigger del toggle para cerrar
+        }
+      });
+    });
+
+    // Cerrar menú al hacer scroll
+    let scrollTimer: NodeJS.Timeout;
+    window.addEventListener("scroll", function () {
+      if (isMenuOpen) {
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(() => {
+          if (isMenuOpen) {
+            mobileMenuButton?.click();
+          }
+        }, 100);
+      }
+    });
+
+    function onScroll() {
+      const scrollPos = window.scrollY + 120; // Offset para activar antes
+      let activeSet = false;
+      navLinks.forEach(link => {
+        const targetSection = document.querySelector(link.getAttribute("href"));
+        if (!targetSection) return;
+        if (scrollPos >= targetSection.offsetTop && scrollPos < targetSection.offsetTop + targetSection.offsetHeight) {
+          navLinks.forEach(l => l.classList.remove("text-primary", "font-bold", "border-b-2", "border-primary"));
+          link.classList.add("text-primary", "font-bold", "border-b-2", "border-primary");
+          activeSet = true;
+        }
+      });
+      if (!activeSet) {
+        navLinks.forEach(l => l.classList.remove("text-primary", "font-bold", "border-b-2", "border-primary"));
+      }
+    }
+
+    // Efecto de scroll en el header
+    if (!header) return;
+
+    window.addEventListener("scroll", () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > 80) {
+        header.classList.add("shadow-xl", "bg-white");
+      } else {
+        header.classList.remove("shadow-xl", "bg-white");
+      }
+    });
+
+    window.addEventListener("scroll", onScroll);
+    onScroll(); // Inicializa al cargar
+  });
+</script>

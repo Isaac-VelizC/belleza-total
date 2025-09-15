@@ -1,0 +1,74 @@
+---
+import GalleryCard from "@components/ui/GalleryCard.astro";
+import data from "../assets/json/data.json";
+
+const infoData = data.gallery;
+const categories = data.category;
+---
+
+<!-- Filtros de categoría -->
+<div class="flex flex-wrap justify-center gap-3 mb-12">
+  <button
+    class="filter-btn active px-6 py-3 rounded-full font-semibold transition-all duration-300 bg-primary text-white shadow-lg"
+    data-filter="all"
+  >
+    Todos
+  </button>
+  {
+    categories.map((cat) => (
+      <button
+        class="filter-btn px-6 py-3 rounded-full font-semibold transition-all duration-300 bg-white text-[#333333] border border-[#F48FB1]/30 hover:bg-[#F48FB1]/10 hover:border-primary"
+        data-filter={cat.name}
+      >
+        {cat.name}
+      </button>
+    ))
+  }
+</div>
+
+<!-- Grid de imágenes -->
+<div class="gallery-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" id="gallery-container">
+  {infoData.map((item) => <GalleryCard itemCard={item}/>)}
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterBtns = document.querySelectorAll<HTMLButtonElement>(".filter-btn");
+    const galleryItems = document.querySelectorAll<HTMLElement>(".gallery-item");
+    let visibleImages = [...galleryItems];
+
+    // Filtros de categoría
+    filterBtns.forEach((btn) => {
+      btn.addEventListener("click", function () {
+        const filter = this.getAttribute("data-filter");
+
+        // Actualizar botones activos
+        filterBtns.forEach((b) => {
+          b.classList.remove("active", "bg-primary", "text-white");
+          b.classList.add("bg-white", "text-texto");
+        });
+        this.classList.add("active", "bg-primary", "text-white");
+        this.classList.remove("bg-white", "text-texto");
+
+        // Filtrar imágenes
+        galleryItems.forEach((item, index) => {
+          const category = item.getAttribute("data-category");
+
+          if (filter === "all" || category === filter) {
+            item.style.display = "block";
+            item.style.animationDelay = `${index * 0.05}s`;
+            item.classList.add("animate-fadeInUp");
+          } else {
+            item.style.display = "none";
+            item.classList.remove("animate-fadeInUp");
+          }
+        });
+
+        // Actualizar array de imágenes visibles
+        visibleImages = [...galleryItems].filter(
+          (item) => item.style.display !== "none"
+        )
+      });
+    });
+  });
+</script>

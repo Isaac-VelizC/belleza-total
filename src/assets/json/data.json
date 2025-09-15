@@ -1,0 +1,197 @@
+{
+  "salon": {
+    "nombre": "Belleza Total",
+    "objetivo": "Incrementar las reservas de citas en línea y atraer nuevos clientes mostrando servicios, promociones y testimonios de confianza."
+  },
+  "hero": {
+    "titulo": "Resalta tu Belleza Natural en Belleza Total",
+    "subtitulo": "Cortes, coloración, tratamientos y mucho más para realzar tu estilo. Reserva tu cita en línea fácilmente y disfruta de promociones exclusivas.",
+    "imagen": "https://i.pinimg.com/736x/a4/1a/af/a41aafff7cd6a3f08717336d00269784.jpg",
+    "ctaTexto": "Reserva tu cita ahora",
+    "ctaLink": "#contact",
+    "ctaTextoSecondary": "Ver Servicios",
+    "ctaLinkSecondary": "#servicios"
+  },
+  "about": {
+    "titulo": "Sobre Nosotros",
+    "descripcion": "En Belleza Total nos apasiona cuidar de ti. Con más de 10 años de experiencia, ofrecemos un servicio personalizado con productos de alta calidad para resaltar tu estilo único.",
+    "imagen": "./../../assets/images/about.jpg"
+  },
+  "services": [
+    {
+      "titulo": "Cortes de Cabello",
+      "descripcion": "Cortes modernos y clásicos para todo tipo de estilos.",
+      "icono": "scissors"
+    },
+    {
+      "titulo": "Coloración",
+      "descripcion": "Tintes profesionales y tratamientos de color duraderos.",
+      "icono": "paint"
+    },
+    {
+      "titulo": "Peinados",
+      "descripcion": "Peinados para eventos especiales, bodas y fiestas.",
+      "icono": "hairDryer"
+    },
+    {
+      "titulo": "Tratamientos",
+      "descripcion": "Keratina, hidratación profunda y nutrición capilar.",
+      "icono": "plant"
+    },
+    {
+      "titulo": "Manicure & Pedicure",
+      "descripcion": "Cuidado completo para tus manos y pies.",
+      "icono": "polish"
+    }
+  ],
+  "benefits": [
+    "Atención personalizada por estilistas expertos.",
+    "Uso de productos profesionales de alta calidad.",
+    "Ambiente relajante y acogedor.",
+    "Promociones exclusivas para clientes frecuentes.",
+    "Ubicación céntrica y de fácil acceso."
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "nombre": "María López",
+      "comentario": "¡Me encantó el servicio! Mi cabello quedó espectacular.",
+      "foto": "https://i.pinimg.com/1200x/96/c2/b6/96c2b66606e1dc1db59cfa71572d8036.jpg",
+      "rating": 5,
+      "verified": true
+    },
+    {
+      "id": 2,
+      "nombre": "Carla Sánchez",
+      "comentario": "Muy profesionales, me hicieron sentir como en casa.",
+      "foto": "https://i.pinimg.com/1200x/96/c2/b6/96c2b66606e1dc1db59cfa71572d8036.jpg",
+      "rating": 5,
+      "verified": true
+    },
+    {
+      "id": 3,
+      "nombre": "Ana Fernández",
+      "comentario": "Definitivamente el mejor salón de la ciudad.",
+      "foto": "https://i.pinimg.com/1200x/96/c2/b6/96c2b66606e1dc1db59cfa71572d8036.jpg",
+      "rating": 4,
+      "verified": true
+    }
+  ],
+  "category": [
+    {"id": 1, "name": "cortes"},
+    {"id": 2, "name": "color"},
+    {"id": 3, "name": "tratamientos"},
+    {"id": 4, "name": "maquillaje"}
+  ],
+  "gallery": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "category": "cortes",
+      "url": "https://i.pinimg.com/1200x/68/d3/59/68d3594c9f046906ae1cfca13e66d7fc.jpg",
+      "title": "Transformación #1",
+      "description": "Corte profesional y estilizado"
+    },
+    {
+      "id": 2,
+      "categoryID": 2,
+      "category": "color",
+      "url": "https://i.pinimg.com/736x/f4/c7/d2/f4c7d2fe6168cf660b5da3e012f5f158.jpg",
+      "title": "Transformación #2",
+      "description": "Coloración y técnicas avanzadas"
+    },
+    {
+      "id": 3,
+      "categoryID": 3,
+      "category": "tratamientos",
+      "url": "https://i.pinimg.com/736x/65/1b/6c/651b6ceb89808a8cf53025540c16f103.jpg",
+      "title": "Transformación #3",
+      "description": "Tratamientos capilares intensivos"
+    },
+    {
+      "id": 4,
+      "categoryID": 4,
+      "category": "maquillaje",
+      "url": "https://i.pinimg.com/736x/f7/8a/40/f78a405855ee351bf42f39214a2fd3dd.jpg",
+      "title": "Transformación #4",
+      "description": "Maquillaje profesional"
+    },
+    {
+      "id": 5,
+      "categoryID": 2,
+      "category": "color",
+      "url": "https://i.pinimg.com/736x/af/56/4f/af564f80b763677c2864df959088dae7.jpg",
+      "title": "Transformación #5",
+      "description": "Coloración y técnicas avanzadas"
+    },
+    {
+      "id": 6,
+      "categoryID": 4,
+      "category": "maquillaje",
+      "url": "https://i.pinimg.com/736x/96/e2/c1/96e2c19b924622d6744a43e968db6f69.jpg",
+      "title": "Transformación #6",
+      "description": "Maquillaje profesional"
+    },
+    {
+      "id": 7,
+      "categoryId": 1,
+      "category": "cortes",
+      "url": "https://i.pinimg.com/736x/c2/41/44/c24144709fd0510be8945fb83b26da84.jpg",
+      "title": "Transformación #7",
+      "description": "Corte profesional y estilizado"
+    },
+    {
+      "id": 8,
+      "categoryID": 3,
+      "category": "tratamientos",
+      "url": "https://i.pinimg.com/736x/80/51/72/8051720fe329c9dcbd5de2b64fce6c2c.jpg",
+      "title": "Transformación #8",
+      "description": "Tratamientos capilares intensivos"
+    }
+  ],
+  "offers": [
+    {
+      "titulo": "Promo Color + Corte",
+      "descripcion": "Luce espectacular con un paquete completo.",
+      "precio": "Bs. 180",
+      "vigencia": "Hasta el 30 de Septiembre"
+    },
+    {
+      "titulo": "Manicure + Pedicure",
+      "descripcion": "Relájate y cuida tus manos y pies.",
+      "precio": "Bs. 100",
+      "vigencia": "Todos los viernes"
+    }
+  ],
+  "faq": [
+    {
+      "pregunta": "¿Necesito reservar con anticipación?",
+      "respuesta": "Sí, recomendamos reservar al menos con 24 horas de anticipación."
+    },
+    {
+      "pregunta": "¿Qué métodos de pago aceptan?",
+      "respuesta": "Aceptamos efectivo, tarjetas de débito y crédito, y transferencias."
+    },
+    {
+      "pregunta": "¿Ofrecen servicios a domicilio?",
+      "respuesta": "Actualmente no, todos los servicios se realizan en nuestro salón."
+    }
+  ],
+  "contact": {
+    "direccion": "Av. Principal #123, Centro, La Paz, Bolivia",
+    "telefono": "+591 777-12345",
+    "whatsapp": "https://wa.me/59177712345",
+    "email": "reservas@bellezatotal.com",
+    "horarios": "Lunes a Sábado: 9:00 AM - 8:00 PM"
+  },
+  "location": {
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!...",
+    "texto": "Nos encontramos en pleno centro, con fácil acceso en transporte público."
+  },
+  "ctaFinal": {
+    "titulo": "¿Lista para un cambio de look?",
+    "subtitulo": "Reserva tu cita hoy mismo y vive la experiencia Belleza Total",
+    "ctaTexto": "Agendar Ahora",
+    "ctaLink": "#contact"
+  }
+}

@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+import LogoBelleza from "./../assets/images/logo.png";
+---
+
+<a href="#hero" class="group flex items-center space-x-2">
+  <!-- Icono del logo -->
+  <div class="relative">
+    <div
+      class="w-10 h-10 bg-gradient-to-br from-background to-transparent rounded-full flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300"
+    >
+      <Image src={LogoBelleza} width={40} height={40} alt="Belleza Total" />
+    </div>
+  </div>
+
+  <!-- Nombre del salón -->
+  <div>
+    <h1
+      class="text-xl lg:text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
+    >
+      Belleza Total
+    </h1>
+    <p class="text-xs text-texto/60 hidden lg:block">
+      Salón de belleza profesional
+    </p>
+  </div>
+</a>
