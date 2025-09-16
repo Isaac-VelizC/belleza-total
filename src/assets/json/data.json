@@ -15,7 +15,7 @@
   "about": {
     "titulo": "Sobre Nosotros",
     "descripcion": "En Belleza Total nos apasiona cuidar de ti. Con más de 10 años de experiencia, ofrecemos un servicio personalizado con productos de alta calidad para resaltar tu estilo único.",
-    "imagen": "/src/assets/images/about.jpg"
+    "imagen": "/images/about.jpg"
   },
   "services": [
     {
@@ -56,7 +56,7 @@
       "id": 1,
       "nombre": "María López",
       "comentario": "¡Me encantó el servicio! Mi cabello quedó espectacular.",
-      "foto": "/src/assets/images/T1.jpg",
+      "foto": "/images/T1.jpg",
       "rating": 5,
       "verified": true
     },
@@ -64,7 +64,7 @@
       "id": 2,
       "nombre": "Carla Sánchez",
       "comentario": "Muy profesionales, me hicieron sentir como en casa.",
-      "foto": "/src/assets/images/T2.jpg",
+      "foto": "/images/T2.jpg",
       "rating": 5,
       "verified": true
     },
@@ -72,7 +72,7 @@
       "id": 3,
       "nombre": "Ana Fernández",
       "comentario": "Definitivamente el mejor salón de la ciudad.",
-      "foto": "/src/assets/images/T3.jpg",
+      "foto": "/images/T3.jpg",
       "rating": 4,
       "verified": true
     }
@@ -88,7 +88,7 @@
       "id": 1,
       "categoryId": 1,
       "category": "cortes",
-      "url": "/src/assets/images/G1.jpg",
+      "url": "/images/G1.jpg",
       "title": "Transformación #1",
       "description": "Corte profesional y estilizado"
     },
@@ -96,7 +96,7 @@
       "id": 2,
       "categoryID": 2,
       "category": "color",
-      "url": "/src/assets/images/G2.jpg",
+      "url": "/images/G2.jpg",
       "title": "Transformación #2",
       "description": "Coloración y técnicas avanzadas"
     },
@@ -104,7 +104,7 @@
       "id": 3,
       "categoryID": 3,
       "category": "tratamientos",
-      "url": "/src/assets/images/G3.jpg",
+      "url": "/images/G3.jpg",
       "title": "Transformación #3",
       "description": "Tratamientos capilares intensivos"
     },
@@ -112,7 +112,7 @@
       "id": 4,
       "categoryID": 4,
       "category": "maquillaje",
-      "url": "/src/assets/images/G4.jpg",
+      "url": "/images/G4.jpg",
       "title": "Transformación #4",
       "description": "Maquillaje profesional"
     },
@@ -120,7 +120,7 @@
       "id": 5,
       "categoryID": 2,
       "category": "color",
-      "url": "/src/assets/images/G5.jpg",
+      "url": "/images/G5.jpg",
       "title": "Transformación #5",
       "description": "Coloración y técnicas avanzadas"
     },
@@ -128,7 +128,7 @@
       "id": 6,
       "categoryID": 4,
       "category": "maquillaje",
-      "url": "/src/assets/images/G6.jpg",
+      "url": "/images/G6.jpg",
       "title": "Transformación #6",
       "description": "Maquillaje profesional"
     },
@@ -136,7 +136,7 @@
       "id": 7,
       "categoryId": 1,
       "category": "cortes",
-      "url": "/src/assets/images/G7.jpg",
+      "url": "/images/G7.jpg",
       "title": "Transformación #7",
       "description": "Corte profesional y estilizado"
     },
@@ -144,7 +144,7 @@
       "id": 8,
       "categoryID": 3,
       "category": "tratamientos",
-      "url": "/src/assets/images/G8.jpg",
+      "url": "/images/G8.jpg",
       "title": "Transformación #8",
       "description": "Tratamientos capilares intensivos"
     }
