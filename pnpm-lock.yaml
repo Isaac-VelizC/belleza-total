@@ -1831,8 +1831,8 @@ packages:
     engines: {node: '>=14.16'}
     hasBin: true
 
-  is-network-error@1.1.0:
-    resolution: {integrity: sha512-tUdRRAnhT+OtCZR/LxZelH/C7QtjtFrTu5tXCA8pl55eTUElUHT+GPYV8MBMBvea/j+NxQqVt3LbWMRir7Gx9g==}
+  is-network-error@1.2.0:
+    resolution: {integrity: sha512-32jdpRpJo8SeL7zOuBJbMLz/VTw9mDpTvcKzzR8DkXWsJbbE60gdiX8YOd0UAV6b8Skt+CMytzfgVVIRFidn0Q==}
     engines: {node: '>=16'}
 
   is-number@7.0.0:
@@ -5332,7 +5332,7 @@ snapshots:
     dependencies:
       is-docker: 3.0.0
 
-  is-network-error@1.1.0: {}
+  is-network-error@1.2.0: {}
 
   is-number@7.0.0: {}
 
@@ -6039,7 +6039,7 @@ snapshots:
   p-retry@6.2.1:
     dependencies:
       '@types/retry': 0.12.2
-      is-network-error: 1.1.0
+      is-network-error: 1.2.0
       retry: 0.13.1
 
   p-timeout@6.1.4: {}

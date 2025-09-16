@@ -8,8 +8,5 @@ export default defineConfig({
   adapter: netlify(),
   vite: {
     plugins: [tailwindcss()]
-  },
-  build: {
-    assets: "assets"
   }
 });
