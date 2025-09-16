@@ -169,5 +169,9 @@ import HeaderSection from "@components/ui/HeaderSection.astro";
     </div>
   </div>
   
-  <script type="module" src="/scripts/contact.ts"></script>
+   <script type="module">
+    import { initContactForm } from "./../scripts/contact.ts";
+    initContactForm();
+  </script>
+
 </section>

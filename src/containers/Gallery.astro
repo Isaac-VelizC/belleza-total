@@ -65,5 +65,8 @@ import SectionFilterGallery from "@components/SectionFilterGallery.astro";
       
     </div>
   </div>
-  <script type="module" src="/scripts/lightbox.ts"></script>
+   <script type="module">
+    import { initGallery } from "./../scripts/lightbox.ts";
+    initGallery();
+  </script>
 </section>
