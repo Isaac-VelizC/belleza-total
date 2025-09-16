@@ -1,4 +1,4 @@
-// src/scripts/contactForm.ts
+
 export function initContactForm() {
   const form = document.getElementById("contact-form") as HTMLFormElement | null;
   const successMessage = document.getElementById("success-message");

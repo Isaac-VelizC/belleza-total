@@ -1,5 +1,3 @@
-// src/scripts/gallery.ts
-
 export function initGallery() {
   const galleryItems = document.querySelectorAll<HTMLElement>('.gallery-item');
   const lightbox = document.getElementById('lightbox') as HTMLElement | null;
